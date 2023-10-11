@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block buttonlink %}
+    <a type="button" class="button-link" href="{{ url_for('goals') }}">Create Goal</a>
+{% endblock %}
+
+{% block content %}
+<section>
+    {% for datum in data %}
+    <div class="goal">
+        <h2 class="title"><a class="header-link" href="{{ url_for('get_activity', id=datum['id']) }}">{{ datum['goal_name'] }}</a></h2>
+        <p class="description">{{ datum['desc'] }}</p>
+        <div class="meta">
+          <span class="progress">Start: {{ datum['date_created'] }}</span>
+          <span class="deadline">End: {{ datum['end_date'] }}</span>
+        </div>
+        <div>
+            <a type="button" class="button-link" href="{{ url_for('activity', id=datum['id']) }}">Add Activity</a>
+            <a type="button" class="button-link" href="{{ url_for('del_goal', id=datum['id']) }}">Delete Goal</a>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+{% endblock %}

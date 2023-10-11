@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<section>
+    {% for datum in data %}
+    <div class="activity">
+        <h2 class="title"><a class="header-link" href="#">{{ datum['heading'] }}</a></h2>
+        <p class="description">{{ datum['body'] }}</p>
+        <div class="goal-meta">
+          <span class="deadline">End: {{ datum['duration'] }}</span>
+        </div>
+        <div>
+            <a type="button" class="button-link" href="{{ url_for('del_goal', id=datum['id']) }}">Delete Goal</a>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+{% endblock %}

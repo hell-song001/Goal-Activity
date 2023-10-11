@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>MMT - Goal & Activity Management</title>
+		<link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Simple CRUD Application">
+		<meta name="author" content="HellSong001">
+
+		{% block style %}{% endblock %}
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<h1 class="heading"><a class="header-link" href='{{ url_for("home") }}'>Month Goal: Win a bet</a> </h1>
+				{% block buttonlink %}{% endblock %}
+			</header>
+			<br>
+
+			<div class="container-goals">
+				{% block content %}{% endblock %}
+				<hr>
+			</div>
+		</div>
+	</body>
+</html>
