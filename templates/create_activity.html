@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="form">
+    <form action="{{ url_for('activity', id=id)}}" method="post">
+        <fieldset>
+            <legend>Create Form</legend>
+            <label>Heading:<input type="text" id="head" name="heading"></label>
+            
+            <label>Body:</label>
+            <textarea name="body" style="height: auto; width: auto;"></textarea>
+            
+            <label>End date:<input type="date" id="end-date" name="end-date"></label>
+        
+            <button type="submit">Send</button>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,94 @@
+
+
+
+html, body, div, span, fieldset, form, label, legend, footer, header, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	background-color: black light;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+  }
+  
+  .container {
+	max-width: 1200px; /* or any size you want */
+	width: 100%;
+	padding: 0 20px;
+	margin: auto;
+  }
+  
+  
+  @media (min-width: 768px) {
+	.container {
+	  width: 80%;
+	  max-width: 1200px;
+	}
+  }
+  
+  .button-link {
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 10px;
+	color: #ffffff;
+	background-color: #007BFF;
+	border: none;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+  }
+  
+  .button-link:hover {
+	background-color: #0056b3;
+  }
+
+  .header-link {
+	font-family: 'Arial', sans-serif;
+	font-size: 24px;
+	color: #333333;
+	text-decoration: none;
+	margin-right: 20px;
+	transition: color 0.3s ease;
+  }
+  
+  .header-link:hover {
+	color: #007BFF;
+  }
+  
+  .goal, .activity {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+  }
+
+  .title {
+    margin: 0;
+    color: #333333;
+    font-size: 24px;
+  }
+  
+  .description {
+    margin: 10px 0;
+    color: #666666;
+  }
+  
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #999999;
+  }
